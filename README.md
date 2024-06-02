@@ -1,2 +1,3 @@
-# WPF_test
-This repository is for a basic WPF test assignment
+# The awesome Library Project
+
+The project provides an easy-to-use Library application.

@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="BookLibrary.Views.LibraryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BookLibrary.Views"
+             xmlns:viewModels="clr-namespace:BookLibrary.ViewModels"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance viewModels:LibraryViewModel}"
+             d:DesignHeight="1200" d:DesignWidth="1400">
+    <Border Background="#333333">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Width="100" HorizontalAlignment="Right"
+                    Command="{Binding RefreshBooksCommand}">
+                Refresh
+            </Button>
+            <ListView Grid.Row="2" ItemsSource="{Binding Path=Books}"
+                      Background="#666666"
+                      VerticalContentAlignment="Top"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.CanContentScroll="True"
+                      MaxHeight="1400">
+                <ListView.Resources>
+                    <DataTemplate DataType="{x:Type viewModels:BookViewModel}">
+                        <local:BookView />
+                    </DataTemplate>
+                </ListView.Resources>
+            </ListView>
+            <Grid Grid.Row="4">
+                <!-- Place for more buttons -->
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

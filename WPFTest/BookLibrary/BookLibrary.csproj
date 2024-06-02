@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+        <LangVersion>default</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ServerCommunication\ServerCommunication.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="CoverImages\1984.jpg" />
+      <Content Include="Images\1984.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="CoverImages\DerMarsianer.jpg" />
+      <Content Include="Images\DerMarsianer.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="CoverImages\DerSteppenwolf.jpg" />
+      <Content Include="Images\DerSteppenwolf.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="CoverImages\Generic.png" />
+      <Content Include="Images\Generic.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="CoverImages\HarryPotterUndDerSteinDerWeisen.jpg" />
+      <Content Include="Images\HarryPotterUndDerSteinDerWeisen.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="CoverImages\ThePaintedVeil.png" />
+      <Content Include="Images\ThePaintedVeil.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="CoverImages\TheQuantumEnigma.png" />
+      <Content Include="Images\TheQuantumEnigma.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="CoverImages\TheShadowsOfElaria.png" />
+      <Content Include="Images\TheShadowsOfElaria.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="CoverImages\WhisperingPines.png" />
+      <Content Include="Images\WhisperingPines.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Images\Generic.jpg" />
+      <Content Include="Images\Generic.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Images\ThePaintedVeil.jpg" />
+      <Content Include="Images\ThePaintedVeil.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Images\TheQuantumEnigma.jpg" />
+      <Content Include="Images\TheQuantumEnigma.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Images\TheShadowsOfElaria.jpg" />
+      <Content Include="Images\TheShadowsOfElaria.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Images\WhisperingPines.jpg" />
+      <Content Include="Images\WhisperingPines.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+</Project>
