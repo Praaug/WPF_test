@@ -1,12 +1,12 @@
 ﻿using System;
-using System.Data.Common;
-using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
 namespace BookLibrary.ViewModels
 {
 
-
+    /// <summary>
+    /// Class that holds BookViewModel, for displaying basic information about each book
+    /// </summary>
     public class BookViewModel : ViewModelBase
     {
         private int _id;

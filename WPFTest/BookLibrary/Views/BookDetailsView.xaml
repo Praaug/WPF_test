@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="BookLibrary.Views.BookDetailsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BookLibrary.Views"
+             mc:Ignorable="d" 
+             Height="550" Width="350"
+             Background="#333333">
+    <Grid Background="#666666" Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*" />
+            <RowDefinition Height="0.3*" />
+            <RowDefinition Height="0.3*" />
+            <RowDefinition Height="25" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center">
+            <Label FontWeight="Bold" Content="{Binding Author}" />
+            <Label FontWeight="Bold" Content="{Binding Title}" />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
+            <Image Height="200" Stretch="Uniform" Source="{Binding Image}" />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center">
+            <Label Content="Publisher:" FontWeight="Bold"/>
+            <Label Content="{Binding Publisher}"/>
+            <Label Content="ReleaseDate:" FontWeight="Bold"/>
+            <Label Content="{Binding ReleaseDate}" ContentStringFormat="dd.MM.yyyy"/>
+            <Label Content="Price:" FontWeight="Bold"/>
+            <Label Content="{Binding Price}"/>
+            <Label Content="PageCount:" FontWeight="Bold"/>
+            <Label Content="{Binding PageCount}"/>
+            <Label Content="Language:" FontWeight="Bold"/>
+            <Label Content="{Binding Language}"/>
+            <Label Content="Edition:" FontWeight="Bold"/>
+            <Label Content="{Binding Edition}"/>
+        </StackPanel>
+
+        <Button Grid.Row="3" Command="{Binding CloseCommand}" Content="Close details" Width="80" Height="25"/>
+
+    </Grid>
+</UserControl>

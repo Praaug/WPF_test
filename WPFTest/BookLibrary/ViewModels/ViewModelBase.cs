@@ -1,17 +1,18 @@
-﻿using System;
+﻿using ServerCommunication.Classes;
+using ServerCommunication.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Controls;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using ServerCommunication.Classes;
-using ServerCommunication.Interfaces;
 
 namespace BookLibrary.ViewModels
 {
 
-
+    /// <summary>
+    /// Base class for all ViewModels
+    /// </summary>
     public class ViewModelBase : INotifyPropertyChanged
     {
         protected IServerConnector _serverConnector = new ServerConnector();
