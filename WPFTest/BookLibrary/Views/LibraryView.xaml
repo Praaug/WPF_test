@@ -26,7 +26,8 @@
                       VerticalContentAlignment="Top"
                       ScrollViewer.VerticalScrollBarVisibility="Auto"
                       ScrollViewer.CanContentScroll="True"
-                      MaxHeight="1400">
+                      MaxHeight="1400"
+                      SelectedItem="{Binding SelectedBook}">
                 <ListView.Resources>
                     <DataTemplate DataType="{x:Type viewModels:BookViewModel}">
                         <local:BookView />
@@ -34,8 +35,31 @@
                 </ListView.Resources>
             </ListView>
             <Grid Grid.Row="4">
-                <!-- Place for more buttons -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Command="{Binding ShowDetailsCommand}"  
+                        Width="100" 
+                        Height="30" 
+                    Content="Zeig Buch Details"/>
+                    <Button Command="{Binding AddBookCommand}"  
+                        Width="100" 
+                        Height="30"
+                    Content="Add Book"/>
+                    <Button Command="{Binding RemoveBookCommand}"  
+                        Width="100" 
+                        Height="30"
+                    Content="Remove Book"/>
+                    <Button Command="{Binding CheckoutBookCommand}"  
+                        Width="100" 
+                        Height="30"
+                        Margin="35,0,0,0"
+                    Content="Checkout Book"/>
+                    <Button Command="{Binding ReturnBookCommand}"  
+                        Width="100" 
+                        Height="30"
+                    Content="Return Book"/>
+                </StackPanel>
+
             </Grid>
         </Grid>
-    </Border>
+    </Border> 
 </UserControl>

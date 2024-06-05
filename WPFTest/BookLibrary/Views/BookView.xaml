@@ -7,14 +7,14 @@
              xmlns:viewModels="clr-namespace:BookLibrary.ViewModels"
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance viewModels:BookViewModel}"
-             d:DesignHeight="150" d:DesignWidth="100">
-    <Grid Height="150" Width="100">
+             d:DesignHeight="150" d:DesignWidth="200">
+    <Grid Height="150">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="25" />
-            <RowDefinition Height="25" />
+            <RowDefinition Height="0.8*" />
+            <RowDefinition Height="0.3*" />
+            <RowDefinition Height="0.3*" />
         </Grid.RowDefinitions>
-        <Image Grid.Row="0" Height="100" Width="100" Stretch="UniformToFill" Source="{Binding Image}" />
+        <Image Grid.Row="0" Width="400" Stretch="Uniform" Source="{Binding Image}" />
         <Label Grid.Row="1" Content="{Binding Author}" />
         <Label Grid.Row="2" Content="{Binding Title}" />
     </Grid>

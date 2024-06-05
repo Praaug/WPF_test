@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using Common;
 using ServerCommunication.Interfaces;
@@ -325,9 +326,7 @@ namespace ServerCommunication.Classes
                 BookId = 8,
                 CompletionPercentage = 0,
                 Edition = "3. Ausgabe",
-                Language = "Deutsch",
                 PageCount = 320,
-                Price = 10.99,
                 Publisher = "Suhrkamp",
                 ReleaseDate = new DateTime(2012, 5, 1),
                 ISBN = "978-3-518-37111-6",
@@ -341,7 +340,7 @@ namespace ServerCommunication.Classes
             int highest = 0;
             foreach (var book in _books)
             {
-                Math.Max(highest, book.Id);
+                highest = Math.Max(highest, book.Id);
             }
 
             return highest;
@@ -353,7 +352,7 @@ namespace ServerCommunication.Classes
             int highest = 0;
             foreach (var details in _bookDetails)
             {
-                Math.Max(highest, details.Id);
+                highest = Math.Max(highest, details.Id);
             }
 
             return highest;
