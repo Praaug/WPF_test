@@ -1,13 +1,16 @@
 ﻿using System.Windows.Controls;
 using BookLibrary.ViewModels;
 
-namespace BookLibrary.Views;
-
-public partial class LibraryView : UserControl
+namespace BookLibrary.Views
 {
-    public LibraryView()
+
+
+    public partial class LibraryView : UserControl
     {
-        InitializeComponent();
-        DataContext = new LibraryViewModel();
+        public LibraryView()
+        {
+            InitializeComponent();
+            DataContext = new LibraryViewModel();
+        }
     }
 }

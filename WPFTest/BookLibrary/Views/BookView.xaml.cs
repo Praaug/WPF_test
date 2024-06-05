@@ -1,11 +1,14 @@
 ﻿using System.Windows.Controls;
 
-namespace BookLibrary.Views;
-
-public partial class BookView : UserControl
+namespace BookLibrary.Views
 {
-    public BookView()
+
+
+    public partial class BookView : UserControl
     {
-        InitializeComponent();
+        public BookView()
+        {
+            InitializeComponent();
+        }
     }
 }
